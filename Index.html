@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wade's Media Apps</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('https://pixnio.com/free-images/2019/01/14/2019-01-14-07-29-45.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        h1 {
+            font-family: 'Baskerville Old Face', sans-serif;
+            color: #eae0e0;
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px; /* Adjust as needed */
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 25px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 10px;
+            transition-duration: 0.75s;
+            cursor: pointer;
+            flex: 1 0 45%; /* 45% width with some margin for spacing */
+        }
+
+        .button1 {
+            background-color: black;
+            color: #c12525;
+            border: 2px solid #c12525;/*Netflix*/
+        }
+
+            .button1:hover {
+                background-color: #c12525;
+                color: black;
+                border: 2px solid black;
+            }
+
+        .button2 {
+            background-color: black;
+            color: #57dc48;
+            border: 2px solid #57dc48;/*Hulu*/
+        }
+
+            .button2:hover {
+                background-color: #57dc48;
+                color: black;
+                border: 2px solid black;
+            }
+
+        .button3 {
+            background-color: black;
+            color: #ea2348;
+            border: 2px solid #ea2348;/*YT*/
+        }
+
+            .button3:hover {
+                background-color: #ea2348;
+                color: black;
+                border: 2px solid black;
+            }
+
+        .button4 {
+            background-color: black;
+            color: #3228b7;
+            border: 2px solid #3228b7;
+        }
+
+            .button4:hover {
+                background-color: #3228b7;
+                color: black;
+                border: 2px solid black;/*prime*/
+            }
+        .button5 {
+            background-color: black;
+            color: #8226de;
+            border: 2px solid #8226de;/*max*/
+        }
+
+            .button5:hover {
+                background-color: #8226de;
+                color: black;
+                border: 2px solid black;
+            }
+        .button6 {
+            background-color: black;
+            color: #0fc0e0;
+            border: 2px solid #0fc0e0;/*Disney*/
+        }
+
+            .button6:hover {
+                background-color: #0fc0e0;
+                color: black;
+                border: 2px solid black;
+            }
+        #clock {
+            font-family:'Times New Roman', Times, serif;
+            color:white;
+            font-size:24px;
+            margin-top:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Wade's Media Apps</h1>
+    <div class="button-container">
+        <button class="button button1" onclick="window.open('https://www.netflix.com', '_blank');">Netflix</button>
+        <button class="button button2">Hulu</button>
+        <button class="button button3" onclick="window.open('https://www.youtube.com', '_blank');">YouTube</button>
+        <button class="button button4">Amazon Prime</button>
+        <button class="button button5">Max</button>
+        <button class="button button6">Disney+</button>
+    </div>
+    <div id="clock"></div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2,'0');
+            const minutes = now.getHours().toString().padStart(2,'0');
+            const seconds = now.getHours().toString().padStart(2,'0');
+            const timeString = '${hours}:${minutes}:${seconds}';
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
